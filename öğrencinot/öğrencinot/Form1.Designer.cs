@@ -179,7 +179,7 @@
             this.label6.Size = new System.Drawing.Size(126, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Kalan Öğrenci Oranı";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+        
             // 
             // label7
             // 
@@ -214,8 +214,6 @@
             this.VizeBtn.Name = "VizeBtn";
             this.VizeBtn.Size = new System.Drawing.Size(120, 22);
             this.VizeBtn.TabIndex = 7;
-            this.VizeBtn.ValueChanged += new System.EventHandler(this.VizeBtn_ValueChanged);
-            this.VizeBtn.Click += new System.EventHandler(this.VizeBtn_Click);
             // 
             // FinalBtn
             // 
@@ -223,7 +221,6 @@
             this.FinalBtn.Name = "FinalBtn";
             this.FinalBtn.Size = new System.Drawing.Size(120, 22);
             this.FinalBtn.TabIndex = 8;
-            this.FinalBtn.Click += new System.EventHandler(this.FinalBtn_Click);
             // 
             // BütBtn
             // 
@@ -322,7 +319,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+          
             this.Cinsiyet.ResumeLayout(false);
             this.Cinsiyet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OgrenciNo)).EndInit();

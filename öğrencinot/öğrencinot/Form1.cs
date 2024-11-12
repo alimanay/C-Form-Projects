@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace öğrencinot
@@ -18,25 +12,17 @@ namespace öğrencinot
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
         int toplam_Ogrenci = 0;
         private void Btn_ListeyeEkle_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 if (text_İsim == null || text_Soyisim == null || numericUpDown_OgrenciNo.Value == 0)
                 {
                     MessageBox.Show("Lütfen Tüm Bilgileri Doldurunuz! ");
                     OgrenciListesi.Items.Remove(OgrenciListesi.SelectedItems);
-
                 }
-
-
                 else
                 {
                     if (RadioBtn_Erkek.Checked == true)
@@ -60,7 +46,7 @@ namespace öğrencinot
                         else
                         if (Sonuc < 60)
                         {
-                            KalanOgrenciler.Items.Insert(0, "Kadın" + ", " + "İsim:" + text_İsim.Text + "   " + "SoyİSim:" + text_Soyisim.Text + "  Ogrenci no:" + numericUpDown_OgrenciNo.Value +" "+ "Ortalama:" + Sonuc + " KALDI");
+                            KalanOgrenciler.Items.Insert(0, "Kadın" + ", " + "İsim:" + text_İsim.Text + "   " + "SoyİSim:" + text_Soyisim.Text + "  Ogrenci no:" + numericUpDown_OgrenciNo.Value + " " + "Ortalama:" + Sonuc + " KALDI");
 
                         }
 
@@ -79,8 +65,6 @@ namespace öğrencinot
                             BütBtn.Value = 0;
                             Sonuc = 0;
                             RadioBtn_Erkek.Checked = false;
-
-
                         }
                         else
                         {
@@ -95,9 +79,6 @@ namespace öğrencinot
                             BütBtn.Value = 0;
                             Sonuc = 0;
                             RadioButton_Kadın.Checked = false;
-
-
-
                         }
                     }
 
@@ -108,15 +89,10 @@ namespace öğrencinot
 
                 MessageBox.Show(ex.Message);
             }
-
-
-
         }
         double Sonuc;
         private void Btn_Hesapla_Click(object sender, EventArgs e)
         {
-
-
 
             if (BütBtn.Value == 0)
             {
@@ -129,25 +105,6 @@ namespace öğrencinot
                 Sonuc = ((Convert.ToDouble(VizeBtn.Value * 40)) / 100) + ((Convert.ToDouble(BütBtn.Value) * 60) / 100);
             }
 
-
-
-        }
-
-
-
-        private void VizeBtn_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FinalBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VizeBtn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)
@@ -156,16 +113,15 @@ namespace öğrencinot
             if (text_İsim.Text != null || text_Soyisim.Text != null || numericUpDown_OgrenciNo.Value != 0 || VizeBtn.Value != 0 || FinalBtn.Value != 0 || BütBtn.Value != 0)
             {
 
-
                 try
                 {
                     int index = OgrenciListesi.Items.IndexOf(OgrenciListesi.Text);
                     int index1 = KalanOgrenciler.Items.IndexOf(KalanOgrenciler.Text);
-                   
+
                     OgrenciListesi.Items.Remove(OgrenciListesi.SelectedItem);
-                    OgrenciListesi.Items.Insert(index, "isim:" +label1.Text + ": " + "Soyisim:" + text_İsim.Text + " " + label2.Text + ":" + text_Soyisim.Text + " " + label3.Text + " " + numericUpDown_OgrenciNo.Value + " " + label9.Text + VizeBtn.Value + "  " + label8.Text + " " + FinalBtn.Value + " ");
-                    
-                    KalanOgrenciler.Items.Insert(index1,"isim:" + text_İsim.Text + "   " +"Soyisim:"+ text_Soyisim.Text +  "  " + " " + numericUpDown_OgrenciNo.Value  + "Ortalama:" + Sonuc + " KALDI");
+                    OgrenciListesi.Items.Insert(index, "isim:" + label1.Text + ": " + "Soyisim:" + text_İsim.Text + " " + label2.Text + ":" + text_Soyisim.Text + " " + label3.Text + " " + numericUpDown_OgrenciNo.Value + " " + label9.Text + VizeBtn.Value + "  " + label8.Text + " " + FinalBtn.Value + " ");
+
+                    KalanOgrenciler.Items.Insert(index1, "isim:" + text_İsim.Text + "   " + "Soyisim:" + text_Soyisim.Text + "  " + " " + numericUpDown_OgrenciNo.Value + "Ortalama:" + Sonuc + " KALDI");
                     KalanOgrenciler.Items.Remove(KalanOgrenciler.SelectedItem);
                 }
                 catch (Exception)
@@ -173,8 +129,6 @@ namespace öğrencinot
 
                     MessageBox.Show("Geçersiz  İşlem Bilgileri Doldurunuz!");
                 }
-
-
             }
             else
             {
@@ -191,7 +145,6 @@ namespace öğrencinot
                 return;
             }
 
-            
             string selectedItem = OgrenciListesi.SelectedItem.ToString();
 
             string[] parts = selectedItem.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -200,12 +153,12 @@ namespace öğrencinot
             // Öğrenciyi OgrenciListesi'nden sil
             OgrenciListesi.Items.Remove(OgrenciListesi.SelectedItem);
 
-        
+
             for (int i = KalanOgrenciler.Items.Count - 1; i >= 0; i--)
             {
                 string item = KalanOgrenciler.Items[i].ToString();
 
-                
+
                 if (item.Contains("Ogrenci no" + studentNo))
                 {
                     KalanOgrenciler.Items.RemoveAt(i);
@@ -227,14 +180,11 @@ namespace öğrencinot
                     if (item.Split(',')[0] == "Erkek")
                     {
                         erkekSA++;
-
-
                     }
                     else
                     {
                         kadınSa++;
                     }
-
                 }
                 label4.Text = "Kalan Kız Öğrenci Sayısı:" + kadınSa.ToString();
                 label5.Text = "kalan Erkek Öğrenci Sayısı" + erkekSA.ToString();
@@ -247,29 +197,22 @@ namespace öğrencinot
                 MessageBox.Show(ex.Message);
             }
 
-
-
         }
-
-
 
         private void text_Soyisim_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-            }
+            }
         }
         private void text_İsim_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
-            }
+                e.Handled = true;
+            }
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

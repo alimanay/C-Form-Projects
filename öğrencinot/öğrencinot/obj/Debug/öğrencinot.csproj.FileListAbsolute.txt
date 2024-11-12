@@ -1,0 +1,10 @@
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\bin\Debug\öğrencinot.exe.config
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\bin\Debug\öğrencinot.exe
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\bin\Debug\öğrencinot.pdb
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.csproj.AssemblyReference.cache
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.Form1.resources
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.Properties.Resources.resources
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.csproj.GenerateResource.cache
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.csproj.CoreCompileInputs.cache
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.exe
+C:\Users\alima\Desktop\c#ders  çalışmaları\öğrencinot\öğrencinot\obj\Debug\öğrencinot.pdb
